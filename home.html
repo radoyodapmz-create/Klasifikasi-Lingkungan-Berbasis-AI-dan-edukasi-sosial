@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - EcoClassify AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-nature">
+    <header class="main-header">
+        <h1>EcoClassify AI</h1>
+        <p>Klasifikasi Lingkungan & Edukasi Sosial untuk Masa Depan Hijau</p>
+    </header>
+
+    <main class="container">
+        <section class="upload-section card">
+            <h3>Unggah Foto Lingkungan</h3>
+            <p>Gunakan AI kami untuk menganalisis kondisi lingkungan di sekitarmu.</p>
+            
+            <form id="uploadForm">
+                <div class="upload-area" id="dropZone">
+                    <input type="file" id="imageInput" accept="image/*" required>
+                    <p>Klik atau seret gambar ke sini</p>
+                </div>
+                <div class="input-group">
+                    <textarea id="imageDesc" placeholder="Berikan keterangan singkat tentang foto ini..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-success">Analisis Gambar</button>
+            </form>
+        </section>
+
+        <section id="resultSection" class="result-section card hidden">
+            <h3>Hasil Klasifikasi AI</h3>
+            <div class="result-content">
+                <div class="preview-box">
+                    <img id="imagePreview" src="#" alt="Preview Gambar">
+                </div>
+                <div class="analysis-box">
+                    <p><strong>Deskripsi:</strong> <span id="displayDesc"></span></p>
+                    <div class="ai-badge" id="aiStatus">Menganalisis...</div>
+                    <p id="aiAdvice" class="advice-text"></p>
+                </div>
+            </div>
+            <button onclick="resetUpload()" class="btn-secondary">Unggah Lagi</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <h4>Edukasi Lingkungan</h4>
+            <p>Tahukah kamu? Satu pohon dewasa dapat menyerap hingga 22kg karbon dioksida per tahun. Mari jaga ekosistem kita tetap seimbang.</p>
+            <p>&copy; 2023 EcoClassify AI - Bergerak Bersama untuk Alam.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
